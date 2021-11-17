@@ -49,17 +49,27 @@ body {
     padding: 11px;
 }
 
-.customer-details-inner {
+.customer-details-tiles {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 70%;
+    width: 488px;
+    border-right: 1px #D0D2D3 solid;
+}
+
+.customer-details-halves {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .garment-image {
-    display: grid;
+    padding: 0 15px;
 }
 
+.garment-image > img {
+    padding: 15px 0;
+}
 
 .operation {
     height: 332px;
@@ -114,7 +124,7 @@ h6 {
 .tile {
     border-bottom: 1px #D0D2D3 solid;
     height: 49px;
-    width: 140px;
+    width: 162.5px;
 }
 
 .line-stroke {

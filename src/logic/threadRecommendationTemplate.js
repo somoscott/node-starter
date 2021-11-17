@@ -21,66 +21,69 @@ const templateString = `<!DOCTYPE html>
     <div class="content">
         <div class="customer-details">
             <h2>Customer details</h2>
-            <div class="customer-details-inner">    
-                <div class="tile">
-                    <h5>Customer</h5>
-                    <h6>{{customerProfile.companyName}}</h6>
+            <div class="customer-details-halves">
+                <div class="customer-details-tiles">
+                    <div class="tile">
+                        <h5>Customer</h5>
+                        <h6>{{customerProfile.companyName}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Brand</h5>
+                        <h6>???</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Country</h5>
+                        <h6>{{customerProfile.country}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Contact</h5>
+                        <h6>{{customerProfile.fullName}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Title/position</h5>
+                        <h6>{{customerProfile.title}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Department</h5>
+                        <h6>{{customerProfile.department}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Segment</h5>
+                        <h6>{{recommendation.segment}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Garment Type</h5>
+                        <h6>{{recommendation.garmentType}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Style Code</h5>
+                        <h6>{{recommendation.styleCode}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Fabric Type</h5>
+                        <h6>{{recommendation.fabricType}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Fabric Composition</h5>
+                        <h6>{{recommendation.fabricComposition}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Fabric Weight</h5>
+                        <h6>{{recommendation.fabricWeight}} {{recommendation.fabricWeightUnit}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Post Sewing Treatment Type</h5>
+                        <h6>{{recommendation.postSewingTreatmentType}}</h6>
+                    </div>
+                    <div class="tile">
+                        <h5>Post Sewing Treatment</h5>
+                        <h6>{{recommendation.postSewingTreatment}}</h6>
+                    </div>
                 </div>
-                <div class="tile">
-                    <h5>Brand</h5>
-                    <h6>???</h6>
+                <div class="garment-image">
+                    <h5>Garment Picture</h5>
+                    <img src="missing.png"/>
                 </div>
-                <div class="tile">
-                    <h5>Country</h5>
-                    <h6>{{customerProfile.country}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Contact</h5>
-                    <h6>{{customerProfile.fullName}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Title/position</h5>
-                    <h6>{{customerProfile.title}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Department</h5>
-                    <h6>{{customerProfile.department}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Segment</h5>
-                    <h6>{{recommendation.segment}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Garment Type</h5>
-                    <h6>{{recommendation.garmentType}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Style Code</h5>
-                    <h6>{{recommendation.styleCode}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Fabric Type</h5>
-                    <h6>{{recommendation.fabricType}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Fabric Composition</h5>
-                    <h6>{{recommendation.fabricComposition}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Fabric Weight</h5>
-                    <h6>{{recommendation.fabricWeight}} {{recommendation.fabricWeightUnit}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Post Sewing Treatment Type</h5>
-                    <h6>{{recommendation.postSewingTreatmentType}}</h6>
-                </div>
-                <div class="tile">
-                    <h5>Post Sewing Treatment</h5>
-                    <h6>{{recommendation.postSewingTreatment}}</h6>
-                </div>
-            </div>
-            <div class="garment-image">
-                <img src="missing.png"/>
             </div>
         </div>
     </div>
