@@ -19,9 +19,9 @@ const templateString = `<!DOCTYPE html>
         </div>
     </div>
     <div class="content">
-        <div class="block">
-            <div class="customer-details">
-                <h2>Customer details</h2>
+        <div class="customer-details">
+            <h2>Customer details</h2>
+            <div class="customer-details-inner">    
                 <div class="tile">
                     <h5>Customer</h5>
                     <h6>{{customerProfile.companyName}}</h6>
@@ -99,7 +99,7 @@ const observationPartial =
 {{/if}}`
 
 const operationPartial =
-`<div class="block">
+`<div class="block-bottom">
 <div class="operations">
     <h2>{{sectionTitle}}</h2>
     <div class="tile">

@@ -12,7 +12,7 @@ body {
 .header .logo {
     grid-column-start: 1;
     grid-column-end: 2;
-    margin: 5px;
+    margin: 8px;
 }
 
 .header .title {
@@ -21,8 +21,8 @@ body {
 }
 
 .header .prepared-by {
-    grid-column-start: 7;
-    grid-column-end: 8;
+    grid-column-start: 6;
+    grid-column-end: 10;
     text-align: end;
     margin: 15px 8px;
     color: #D0D2D3;
@@ -34,27 +34,29 @@ body {
 
 .content {
     display: grid;
-    width: 100%;
+    width: 806px;
     height: 835px;
+    padding: 18px;
 
     /* Gradient / Blue-AA */
     background: linear-gradient(101.31deg, #005DA9 0%, #017CBE 100%);
 }
 
-.block {
-    margin: 17px 18px 10px 18px;
-    display: flex;
+.customer-details {
+    display: grid;
     border-radius: 10px;
     background: #F6F8FB;
-    width: 806px;
     height: 255px;
-    left: 17px;
-    top: 73px;
+    padding: 11px;
+    
 }
 
-.block div {
-    display: flex;
-    width: 200px;
+.customer-details-inner {
+    display: grid;
+}
+
+.operation {
+    height: 332px;
 }
 
 h1 {
@@ -120,8 +122,4 @@ h6 {
 .header-subtext {
     color:#005DA9;
     font-weight: 700;
-}
-
-div.customer-details {
-    width: 500px;
 }
