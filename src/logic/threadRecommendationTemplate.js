@@ -86,7 +86,6 @@ const templateString = `<!DOCTYPE html>
                 </div>
             </div>
         </div>
-    </div>
     {{#each recommendation.operations }}
         {{> operationsPartial }}
     {{/each}}
@@ -102,67 +101,67 @@ const observationPartial =
 {{/if}}`
 
 const operationPartial =
-`<div class="block-bottom">
-<div class="operations">
-    <h2>{{sectionTitle}}</h2>
-    <div class="tile">
-        <h5>Description</h5>
-        <h6>{{description}}</h6>
-    <div>
-    <div class="tile">
-        <h5>Stitch Type</h5>
-        <h6>{{stitchType}}</h6>
-    <div>
-    <div class="tile tile-double">
-        <h5>Machine Type</h5>
-        <h6>????</h6>
-    <div>
-    <div class="tile">
-        <h5>Stitch Rate</h5>
-        <h6>{{stitchRate}} {{stitchRateUnit}}</h6>
-    <div>
-    <div class="tile">
-        <h5>Bight</h5>
-        <h6>{{bightRate}} {{bightRateUnit}}</h6>
-    <div>
-    <div class="tile">
-        <h5>Needle Size</h5>
-        <h6>{{needleSize}}</h6>
-    <div>
-    <div class="tile">
-        <h5>Needle Point</h5>
-        <h6>{{needlePoint}}</h6>
-    <div>
-    <div class="needle-looper-spreader">
-        <div>
-            <h2>Needle</h2>
-            <h5>Brand</h5>
-            <h6>{{needleBrand}}</h6>
-            <h5>Tex</h5>
-            <h6>{{needleBrandSize}}</h6>
+`<div class="operation-details">
+    <div class="operation-details-left">
+        <h2>{{sectionTitle}}</h2>
+        <div class="tile">
+            <h5>Description</h5>
+            <h6>{{description}}</h6>
         </div>
-        <div>
-            <h2>Looper</h2>
-            <h5>Brand</h5>
-            <h6>{{looperBrand}}</h6>
-            <h5>Tex</h5>
-            <h6>{{looperBrandSize}}</h6>
+        <div class="tile">
+            <h5>Stitch Type</h5>
+            <h6>{{stitchType}}</h6>
         </div>
-        <div>
-            <h2>Spreader</h2>
-            <h5>Brand</h5>
-            <h6>{{spreaderBrand}}</h6>
-            <h5>Tex</h5>
-            <h6>{{spreaderBrandSize}}</h6>
+        <div class="tile tile-double">
+            <h5>Machine Type</h5>
+            <h6>????</h6>
+        </div>
+        <div class="tile">
+            <h5>Stitch Rate</h5>
+            <h6>{{stitchRate}} {{stitchRateUnit}}</h6>
+        </div>
+        <div class="tile">
+            <h5>Bight</h5>
+            <h6>{{bightRate}} {{bightRateUnit}}</h6>
+        </div>
+        <div class="tile">
+            <h5>Needle Size</h5>
+            <h6>{{needleSize}}</h6>
+        </div>
+        <div class="tile">
+            <h5>Needle Point</h5>
+            <h6>{{needlePoint}}</h6>
+        </div>
+        <div class="needle-looper-spreader">
+            <div>
+                <h2>Needle</h2>
+                <h5>Brand</h5>
+                <h6>{{needleBrand}}</h6>
+                <h5>Tex</h5>
+                <h6>{{needleBrandSize}}</h6>
+            </div>
+            <div>
+                <h2>Looper</h2>
+                <h5>Brand</h5>
+                <h6>{{looperBrand}}</h6>
+                <h5>Tex</h5>
+                <h6>{{looperBrandSize}}</h6>
+            </div>
+            <div>
+                <h2>Spreader</h2>
+                <h5>Brand</h5>
+                <h6>{{spreaderBrand}}</h6>
+                <h5>Tex</h5>
+                <h6>{{spreaderBrandSize}}</h6>
+            </div>
+        </div>
+    ${observationPartial}
+    </div>
+    <div class="operation-details-right">
+        <div class="stitch-image">
+            <img src={{imageUrl}}/>
         </div>
     </div>
-   ${observationPartial}
-</div>
-<div class="stitch-image">
-    {{#if imageUrl}}
-        <img src={{imageUrl}}/>
-    {{/if}}
-</div>
 </div>`
 
 export { templateString, operationPartial }

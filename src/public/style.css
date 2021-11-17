@@ -35,7 +35,7 @@ body {
 .content {
     display: grid;
     width: 806px;
-    height: 835px;
+    height: 640px;
     padding: 18px;
 
     /* Gradient / Blue-AA */
@@ -65,14 +65,34 @@ body {
 
 .garment-image {
     padding: 0 15px;
+    width: 265px;
 }
 
 .garment-image > img {
     padding: 15px 0;
 }
 
-.operation {
-    height: 332px;
+.operation-details {
+    border-radius: 10px;
+    background: #F6F8FB;
+    height: 322px;
+    padding: 11px;
+    margin-top: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.operation-details-left {
+    display: flex;
+    width: 600px;
+}
+
+.operation-details-right {
+    width: 179px;
+    border-left: 1px #D0D2D3 solid;
+    display: flex;
 }
 
 h1 {
@@ -125,6 +145,10 @@ h6 {
     border-bottom: 1px #D0D2D3 solid;
     height: 49px;
     width: 162.5px;
+}
+
+.needle-looper-spreader {
+
 }
 
 .line-stroke {
