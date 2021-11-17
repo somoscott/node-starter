@@ -1,4 +1,4 @@
-const templateString = `<!DOCTYPE html>
+const templateFirstPage = `<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -95,7 +95,7 @@ const templateString = `<!DOCTYPE html>
 const observationPartial =
 `{{#if observation}}
 <div class="observations">
-    <h2>Observations</h2>
+    <h2 style="margin-top: 10px;">Observations</h2>
     <p>{{observation}}</p>
 </div>
 {{/if}}`
@@ -106,7 +106,7 @@ const operationPartial =
     <div class="customer-details-halves">
         <div class="operation-details-left">
             <div class="operation-details-tiles">
-                <div class="tile">
+                <div class="tile-sm">
                     <h5>Description</h5>
                     <h6>{{description}}</h6>
                 </div>
@@ -168,4 +168,4 @@ const operationPartial =
     </div>
 </div>`
 
-export { templateString, operationPartial }
+export { templateFirstPage, operationPartial }

@@ -70,6 +70,12 @@ const sampleOperation2Props = {
     updatedAt: '14:50pm May 08, 2021',
 }
 
+const ops3 = Object.assign({}, sampleOperation1Props)
+ops3.description = 'THE THIRD ONE'
+
+const ops4 = Object.assign({}, sampleOperation1Props)
+ops4.description = 'The Fourth One'
+
 const sampleCreateRecommendationFormValues = {
     segment: 'Denim',
     garmentType: 'Jeans',
@@ -80,7 +86,7 @@ const sampleCreateRecommendationFormValues = {
     fabricWeight: '0.00',
     postSewingTreatmentType: 'Dry',
     postSewingTreatment: 'Lorem Ipsum',
-    operations: [sampleOperation1Props, sampleOperation2Props],
+    operations: [sampleOperation1Props, sampleOperation2Props, ops3, ops4],
 }
 
 const sampleData = {

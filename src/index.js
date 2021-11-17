@@ -2,7 +2,7 @@ const { response } = require('express')
 const express = require('express')
 const config = require('./config')
 const log = config.log
-import getHtml from './logic/templating'
+import getPdf, { getHtml } from './logic/templating'
 import sampleData from './logic/mockData'
 
 const app = express()

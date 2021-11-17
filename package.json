@@ -37,6 +37,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "handlebars": "^4.7.7",
+    "lodash": "^4.17.21",
     "pino": "5.17.0",
     "pino-pretty": "2.6.1"
   }
