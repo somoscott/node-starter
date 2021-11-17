@@ -8,6 +8,10 @@ const templateString = `<!DOCTYPE html>
     <div class="header">
         <img src="coats_logo.svg"/>
         <h1>Coats Technical Services</h1>
+        <div>
+            Prepared by:
+            {{techProfile.fullName}} | {{recommendation.operations.updatedAt}} | Page 1 of {{pageCount}}
+        </div>
     </div>
     <div class="block">
         <div class="customer-details">
@@ -73,71 +77,76 @@ const templateString = `<!DOCTYPE html>
             <img src="missing.png"/>
         </div>
     </div>
-    <div class="block">
-        <div class="operations">
-            <h2>Operations</h2>
-            <div class="tile">
-                <h5>Description</h5>
-                <h6>tbd</h6>
-            <div>
-            <div class="tile">
-                <h5>Stitch Type</h5>
-                <h6>tbd</h6>
-            <div>
-            <div class="tile tile-double">
-                <h5>Machine Type</h5>
-                <h6>tbd</h6>
-            <div>
-            <div class="tile">
-                <h5>Stitch Rate</h5>
-                <h6>tbd</h6>
-            <div>
-            <div class="tile">
-                <h5>Bight</h5>
-                <h6>tbd</h6>
-            <div>
-            <div class="tile">
-                <h5>Needle Size</h5>
-                <h6>tbd</h6>
-            <div>
-            <div class="tile">
-                <h5>Needle Point</h5>
-                <h6>tbd</h6>
-            <div>
-            <div class="needle-looper-spreader">
-                <div>
-                    <h2>Needle</h2>
-                    <h5>Brand</h5>
-                    <h6>tbd</h6>
-                    <h5>Tex</h5>
-                    <h6>tbd</h6>
-                </div>
-                <div>
-                    <h2>Looper</h2>
-                    <h5>Brand</h5>
-                    <h6>tbd</h6>
-                    <h5>Tex</h5>
-                    <h6>tbd</h6>
-                </div>
-                <div>
-                    <h2>Spreader</h2>
-                    <h5>Brand</h5>
-                    <h6>tbd</h6>
-                    <h5>Tex</h5>
-                    <h6>tbd</h6>
-                </div>
-            </div>
-            <div class="observations">
-                <h2>Observations</h2>
-                <p>Lorem ipsum dolor sit...</p>
-            </div>
-        </div>
-        <div class="stitch-image">
-            <img src="missing-stitch.png"/>
-        </div>
-    </div>
+    {{#each recommendation.operations }}
+        {{> operationsPartial }}
+    {{/each}}
 </body>
 </html>`
+
+const operationPartial =
+`<div class="block">
+<div class="operations">
+    <h2>Operations</h2>
+    <div class="tile">
+        <h5>Description</h5>
+        <h6>{{description}}</h6>
+    <div>
+    <div class="tile">
+        <h5>Stitch Type</h5>
+        <h6>tbd</h6>
+    <div>
+    <div class="tile tile-double">
+        <h5>Machine Type</h5>
+        <h6>tbd</h6>
+    <div>
+    <div class="tile">
+        <h5>Stitch Rate</h5>
+        <h6>tbd</h6>
+    <div>
+    <div class="tile">
+        <h5>Bight</h5>
+        <h6>tbd</h6>
+    <div>
+    <div class="tile">
+        <h5>Needle Size</h5>
+        <h6>tbd</h6>
+    <div>
+    <div class="tile">
+        <h5>Needle Point</h5>
+        <h6>tbd</h6>
+    <div>
+    <div class="needle-looper-spreader">
+        <div>
+            <h2>Needle</h2>
+            <h5>Brand</h5>
+            <h6>tbd</h6>
+            <h5>Tex</h5>
+            <h6>tbd</h6>
+        </div>
+        <div>
+            <h2>Looper</h2>
+            <h5>Brand</h5>
+            <h6>tbd</h6>
+            <h5>Tex</h5>
+            <h6>tbd</h6>
+        </div>
+        <div>
+            <h2>Spreader</h2>
+            <h5>Brand</h5>
+            <h6>tbd</h6>
+            <h5>Tex</h5>
+            <h6>tbd</h6>
+        </div>
+    </div>
+    <div class="observations">
+        <h2>Observations</h2>
+        <p>Lorem ipsum dolor sit...</p>
+    </div>
+</div>
+<div class="stitch-image">
+    <img src="missing-stitch.png"/>
+</div>
+</div>`
 
 
 const observationsPartial =
@@ -146,4 +155,4 @@ const observationsPartial =
 <p>{{recommendation.observations[0]}}</p>
 {{/if}}`
 
-export { templateString }
+export { templateString, operationPartial }

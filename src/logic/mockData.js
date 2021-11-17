@@ -25,9 +25,32 @@ const sampleCustomerProfile = {
     preferredAdvisor: 'ignored',
 }
 
-const sampleOperationsProps = {
+const sampleOperation1Props = {
     requestId: 'requestId value',
     description: 'Close pocket',
+    stitchType: '514',
+    stitchRateUnit: 'per inch',
+    stitchRate: 10,
+    bightRateUnit: 'per inch',
+    bightRate: 0.19,
+    needleSize: '80/12',
+    needlePoint: 'SES/FFG',
+    brandThread: 'brandThread value',
+    needleBrand: 'Sine',
+    needleBrandSize: 40,
+    looperBrand: 'Qua',
+    looperBrandSize: 41,
+    spreaderBrand: 'Non',
+    spreaderBrandSize: 40,
+    observation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    uploadImgVideo: 'uploadImgVideo value',
+    createdAt: 'a long time ago',
+    updatedAt: '14:50pm May 08, 2021',
+}
+
+const sampleOperation2Props = {
+    requestId: 'requestId value',
+    description: 'THE SECOND ONE',
     stitchType: '514',
     stitchRateUnit: 'per inch',
     stitchRate: 10,
@@ -58,18 +81,14 @@ const sampleCreateRecommendationFormValues = {
     fabricWeight: '0.00',
     postSewingTreatmentType: 'Dry',
     postSewingTreatment: 'Lorem Ipsum',
-    operations: [sampleOperationsProps, sampleOperationsProps],
+    operations: [sampleOperation1Props, sampleOperation2Props],
 }
 
 const sampleData = {
+    pageCount: 3,
     customerProfile: sampleCustomerProfile,
     techProfile: sampleTechProfile,
     recommendation: sampleCreateRecommendationFormValues,
 }
 
 export default sampleData
-export {
-    sampleTechProfile,
-    sampleCustomerProfile,
-    sampleCreateRecommendationFormValues,
-    sampleOperationsProps }

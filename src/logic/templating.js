@@ -1,7 +1,8 @@
 import Handlebars from 'handlebars'
-import { templateString } from './threadRecommendationTemplate'
+import { templateString, operationPartial } from './threadRecommendationTemplate'
 
 const template = Handlebars.compile(templateString)
+Handlebars.registerPartial('operationsPartial', operationPartial)
 
 const getHtml = (props) => {
     const val = template(props)
