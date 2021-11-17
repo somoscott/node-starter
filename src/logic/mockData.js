@@ -49,7 +49,7 @@ const sampleOperationsProps = {
 }
 
 const sampleCreateRecommendationFormValues = {
-    segment: 'segment value',
+    segment: 'Denim',
     garmentType: 'Jeans',
     styleCode: 'CT003',
     fabricType: 'Woven',
