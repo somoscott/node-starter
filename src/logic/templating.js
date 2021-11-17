@@ -1,19 +1,16 @@
-const Handlebars = require('handlebars')
-const templateString = `<html>
-<h1>Name: {{name}}</h1>
-<h3>{{description}}</h3>
-</html>`
+import Handlebars from 'handlebars'
+import { templateString } from './threadRecommendationTemplate'  
 
 const template = Handlebars.compile(templateString)
 
 
-const foo = (props) => {
+const getHtml = (props) => {
     const val = template(props)
     console.log(val)
     return val
 }
 
-const sampleProps = {
+const sampleOperationsProps = {
     requestId: 'requestId value',
     description: 'description value',
     stitchType: 'stitchType value',
@@ -36,5 +33,20 @@ const sampleProps = {
     updatedAt: 'updatedAt value',
 }
 
-export default foo
-export { sampleProps }
+const sampleCreateRecommendationFormValues = {
+    segment: 'segment value',
+    garmentType: 'garmentType value',
+    styleCode: 'styleCode value',
+    fabricType: 'fabricType value',
+    fabricComposition: 'fabricComposition value',
+    fabricWeightUnit: 'fabricWeightUnit value',
+    fabricWeight: 'fabricWeight value',
+    postSewingTreatmentType: 'postSewingTreatmentType value',
+    postSewingTreatment: 'postSewingTreatment value',
+    operations: [sampleOperationsProps, sampleOperationsProps],
+}
+
+const sampleCustomerProps = {}
+
+export default getHtml
+export { sampleCreateRecommendationFormValues, sampleCustomerProps, sampleOperationsProps }

@@ -2,7 +2,7 @@ const { response } = require('express')
 const express = require('express')
 const config = require('./config')
 const log = config.log
-import foo, { sampleProps } from './logic/templating'
+import getHtml, { sampleProps } from './logic/templating'
 
 const app = express()
 const port = 3000
