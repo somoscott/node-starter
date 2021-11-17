@@ -78,15 +78,19 @@ body {
     height: 322px;
     padding: 11px;
     margin-top: 5px;
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
 
 .operation-details-left {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 600px;
+}
+
+.operation-details-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .operation-details-right {
@@ -147,8 +151,21 @@ h6 {
     width: 162.5px;
 }
 
-.needle-looper-spreader {
+.tile-sm {
+    border-bottom: 1px #D0D2D3 solid;
+    height: 49px;
+    width: 150px;
+}
 
+.tile-double {
+    border-bottom: 1px #D0D2D3 solid;
+    height: 49px;
+    width: 287px;
+}
+
+.needle-looper-spreader {
+    width: 150px;
+    border-bottom: 1px #D0D2D3 solid;
 }
 
 .line-stroke {
