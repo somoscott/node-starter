@@ -10,8 +10,8 @@ const templateString = `<!DOCTYPE html>
         <img src="coats_logo.svg"/>
         <h1>Coats Technical Services</h1>
         <div>
-            Prepared by:
-            {{techProfile.fullName}} | {{recommendation.operations.updatedAt}} | Page 1 of {{pageCount}}
+        Prepared by:
+            <span class="header-subtext">{{techProfile.fullName}}</span> | <span class="header-subtext">{{reportDate}}</span> | <span class="header-subtext">Page 1 of {{pageCount}}</span>
         </div>
     </div>
     <div class="block">
@@ -95,7 +95,7 @@ const observationPartial =
 const operationPartial =
 `<div class="block">
 <div class="operations">
-    <h2>Operations</h2>
+    <h2>{{sectionTitle}}</h2>
     <div class="tile">
         <h5>Description</h5>
         <h6>{{description}}</h6>
@@ -150,7 +150,9 @@ const operationPartial =
    ${observationPartial}
 </div>
 <div class="stitch-image">
-    <img src="missing-stitch.png"/>
+    {{#if imageUrl}}
+        <img src={{imageUrl}}/>
+    {{/if}}
 </div>
 </div>`
 

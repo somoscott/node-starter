@@ -16,20 +16,11 @@ h2 {
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0px;
-    text-align: right;    
+    text-align: left;    
+    color: #535759;
 }
 
 h5 {
-    font-family: 'Open Sans';
-    font-size: 11px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0px;
-    text-align: left;
-}
-
-h6 {
     font-family: 'Open Sans';
     font-size: 9px;
     font-style: normal;
@@ -37,6 +28,17 @@ h6 {
     line-height: 11px;
     letter-spacing: 0px;
     text-align: left;
+}
+
+h6 {
+    font-family: 'Open Sans';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #005DA9;
 }
 
 .line-stroke {
@@ -54,4 +56,14 @@ h6 {
     order: 3;
     flex-grow: 0;
     margin: 0px 8px;
+}
+
+.header-subtext {
+    color:#005DA9;
+    font-weight: 700;
+    border-left: gray 1px;
+}
+
+div.customer-details {
+    width: 500px;
 }
