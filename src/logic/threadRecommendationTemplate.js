@@ -3,6 +3,7 @@ const templateString = `<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <title>Coats Thread Recommendation</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="header">

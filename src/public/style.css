@@ -1,19 +1,42 @@
 h1 {
-    position: absolute;
-    width: 183px;
-    height: 22px;
-    left: 66px;
-    top: 19px;
-    
-    font-family: Frutiger LT Std;
+    font-family: 'Frutiger LT Std';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
     /* identical to box height, or 122% */
-    
     /* Primary/Coats-Blue */
     color: #005DA9;
+}
+
+h2 {
+    font-family: 'Open Sans';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: right;    
+}
+
+h5 {
+    font-family: 'Open Sans';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+h6 {
+    font-family: 'Open Sans';
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0px;
+    text-align: left;
 }
 
 .line-stroke {
@@ -31,31 +54,4 @@ h1 {
     order: 3;
     flex-grow: 0;
     margin: 0px 8px;
-}
-
-H5 {
-    font-family: Open Sans;
-    font-size: 11px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0px;
-    text-align: right;
-    
-}
-
-.subtitle-2 {
-    font-family: Open Sans;
-    font-size: 11px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 0px;
-    text-align: right;    
-}
-
-hr { 
-    /* Secondary/Light-Grey */
-    background: #D0D2D3;
-    opacity: 0.4;
 }
