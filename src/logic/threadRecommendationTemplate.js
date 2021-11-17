@@ -83,6 +83,14 @@ const templateString = `<!DOCTYPE html>
 </body>
 </html>`
 
+const observationPartial =
+`{{#if observation}}
+<div class="observations">
+    <h2>Observations</h2>
+    <p>{{observation}}</p>
+</div>
+{{/if}}`
+
 const operationPartial =
 `<div class="block">
 <div class="operations">
@@ -93,66 +101,56 @@ const operationPartial =
     <div>
     <div class="tile">
         <h5>Stitch Type</h5>
-        <h6>tbd</h6>
+        <h6>{{stitchType}}</h6>
     <div>
     <div class="tile tile-double">
         <h5>Machine Type</h5>
-        <h6>tbd</h6>
+        <h6>????</h6>
     <div>
     <div class="tile">
         <h5>Stitch Rate</h5>
-        <h6>tbd</h6>
+        <h6>{{stitchRate}} {{stitchRateUnit}}</h6>
     <div>
     <div class="tile">
         <h5>Bight</h5>
-        <h6>tbd</h6>
+        <h6>{{bightRate}} {{bightRateUnit}}</h6>
     <div>
     <div class="tile">
         <h5>Needle Size</h5>
-        <h6>tbd</h6>
+        <h6>{{needleSize}}</h6>
     <div>
     <div class="tile">
         <h5>Needle Point</h5>
-        <h6>tbd</h6>
+        <h6>{{needlePoint}}</h6>
     <div>
     <div class="needle-looper-spreader">
         <div>
             <h2>Needle</h2>
             <h5>Brand</h5>
-            <h6>tbd</h6>
+            <h6>{{needleBrand}}</h6>
             <h5>Tex</h5>
-            <h6>tbd</h6>
+            <h6>{{needleBrandSize}}</h6>
         </div>
         <div>
             <h2>Looper</h2>
             <h5>Brand</h5>
-            <h6>tbd</h6>
+            <h6>{{looperBrand}}</h6>
             <h5>Tex</h5>
-            <h6>tbd</h6>
+            <h6>{{looperBrandSize}}</h6>
         </div>
         <div>
             <h2>Spreader</h2>
             <h5>Brand</h5>
-            <h6>tbd</h6>
+            <h6>{{spreaderBrand}}</h6>
             <h5>Tex</h5>
-            <h6>tbd</h6>
+            <h6>{{spreaderBrandSize}}</h6>
         </div>
     </div>
-    <div class="observations">
-        <h2>Observations</h2>
-        <p>Lorem ipsum dolor sit...</p>
-    </div>
+   ${observationPartial}
 </div>
 <div class="stitch-image">
     <img src="missing-stitch.png"/>
 </div>
 </div>`
-
-
-const observationsPartial =
-`{{#if recommendation.observations}}
-<h3>Observations:</h3>
-<p>{{recommendation.observations[0]}}</p>
-{{/if}}`
 
 export { templateString, operationPartial }
