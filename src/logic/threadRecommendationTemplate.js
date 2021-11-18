@@ -3,12 +3,12 @@ const templateFirstPage = `<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <title>Coats Thread Recommendation</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <img src="coats_logo.svg"/>
+            <img src="coats-logo.svg"/>
         </div>
         <div class="title">
             <h1>Coats Technical Services</h1>
