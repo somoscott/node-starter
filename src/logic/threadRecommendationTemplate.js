@@ -168,4 +168,6 @@ const operationPartial =
     </div>
 </div>`
 
-export { templateFirstPage, operationPartial }
+const templateFollowOnPage = "<div>WIP</div>"
+
+export { templateFirstPage, operationPartial, templateFollowOnPage }

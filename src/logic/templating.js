@@ -12,40 +12,58 @@ const getBestReportDate = () => {
     const dateOptions = { year: 'numeric', month: 'short', day: 'numeric'};
     const timeOptions = {hour: '2-digit', minute: '2-digit'}
     return `${now.toLocaleTimeString([], timeOptions)} ${now.toLocaleDateString([], dateOptions)}`
-} 
+}
 
-const chunkData = (props) => {
-    const newProps = Object.assign({}, props)
-    // calculate # of pages
-    // determine names of sections based on count of operations
-    if (newProps.recommendation.operations.length === 1) {
-        newProps.recommendation.operations[0].sectionTitle = 'Operations'
-        newProps.pageCount = 1
+const titleEachOperation = (operations) => {
+    if (operations.length === 1) { 
+        operations[0].sectionTitle = 'Operations'
     } else {
-        const chunks = chunk(newProps.recommendation.operations.slice(1) ,2)
-        newProps.pageCount = 2
-        newProps.recommendation.operations.forEach((e, index) => {
+        operations.forEach((e, index) => {
             e.sectionTitle = `Operation ${index < 9 ? '0':''}${index+1}`
         })
     }
+}
+
+const sliceDataForPages = (props) => {
+    const firstPageData = Object.assign({}, props)
+    const operations = props.recommendation.operations
+    titleEachOperation(operations)
+    firstPageData.reportDate = getBestReportDate()
+
+    // Keep the first operation on the data.recommendation.operations field
+    firstPageData.recommendation.operations = [operations[0]]
+    // Remember the remaining list of operations for additional pages
+    const remainingOperations = operations.slice(1)
     
-    newProps.reportDate = getBestReportDate()
-    return newProps
+    // Calculate the total number of pages to be produced:
+    // Customer data + Operation 1 = 1 page
+    // 2 of the remaining operations per page
+    const remainingOperationCount = 1 + firstPageData.recommendation.operations.length
+    firstPageData.pageCount = Math.ceil(remainingOperationCount / 2)
+    return [firstPageData, chunk(remainingOperations, 2)]
 }
 
 
-const getHtml = (props) => {
-    const newProps = calcDerivedValues(props)
-    const chunks = chunkData(newProps)
+const getHtml = (threadRecommendation) => {
+    const [ firstPageData, operationChunks ] = sliceDataForPages(threadRecommendation)
+
+    console.log('first page data', firstPageData)
+    console.log('operation chunks', operationChunks)
 
     // Customer + first Operation
-    const val = firstTemplate(chunks[0])
-    console.log(val)
+    const pages = []
+    pages.push(firstTemplate(firstPageData))
+    console.log('First page', pages[0])
     
-    // All other operations
-
+    // Create pages for remainder of operations
+    for (let i=0; i < operationChunks.length; i++) {
+        // Index here == page number
+        const page = followOnTemplate({ operations: operationChunks[i], pageNumber: i })
+        pages.push(page)
+    }
     
-    return val
+    // return pages
+    return pages[0]
 }
 
 // check for validity (must have at least one operation)
@@ -64,14 +82,11 @@ const checkValidData = (threadRecommendation) => {
  */
 const getPdf = (threadRecommendation) => {
     checkValidData()
-    const chunkedData = chunkData(threadRecommendation)
+    const html = getHtml(threadRecommendation)
+    // TODO convert each chunk into a PDF
+    const pdfData = html
 
-    // getHtml chunks (pages)
-    const html = getHtml(chunkedData)
-
-    // convert each chunk into a PDF
-
-    // return pdf data
+    return pdfData
 }
 
 export default getPdf
